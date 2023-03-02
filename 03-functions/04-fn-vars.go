@@ -37,12 +37,12 @@ func main() {
 	multiplyResult := operation(100, 200)
 	fmt.Println("multiply Result :", multiplyResult)
 
-	/*
-		q, r := func(x, y int) (quotient, remainder int) {
-			quotient, remainder = x/y, x%y
-			return
-		}(100, 7)
-		fmt.Printf("Dividing 100 by 7, quotient = %d and remainder = %d\n", q, r)
-	*/
+	var divide func(int, int) (int, int)
+	divide = func(x, y int) (quotient, remainder int) {
+		quotient, remainder = x/y, x%y
+		return
+	}
+	q, r := divide(100, 7)
+	fmt.Printf("Dividing 100 by 7, quotient = %d and remainder = %d\n", q, r)
 
 }
