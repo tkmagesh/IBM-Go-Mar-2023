@@ -117,4 +117,14 @@ func main() {
 	x, y, str := 100, 200, "Sum of %d and %d is %d\n"
 	result := x + y
 	fmt.Printf(str, x, y, result)
+
+	//complex numbers
+	var c1 complex128
+	c1 = 4 + 5i
+	fmt.Println(c1)
+	c2 := 7 + 11i
+	complexSum := c1 + c2
+	fmt.Println("complexSum :", complexSum)
+	fmt.Println("real(complexSum) :", real(complexSum))
+	fmt.Println("imag(complexSum) :", imag(complexSum))
 }
