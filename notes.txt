@@ -102,3 +102,11 @@ Data Types
 
     byte (alias for uint8)
     rune (alias for int32)(unicode code point)
+
+Variables
+    Function Scope
+        CAN use :=
+        CANNOT have unused variables
+
+    Package Scope
+        CANNOT use :=
