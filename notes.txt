@@ -55,4 +55,9 @@ Why Go?
             sync/atomic package
 
 
-    
+to run a go program
+    go run <file_name.go>
+
+to create a build
+    go build <file_name.go>
+    go build -o <binary_name> <file_name.go>
