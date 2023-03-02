@@ -1,0 +1,58 @@
+Magesh Kuppan
+
+Schedule:
+    Commence    : 9:30 AM
+    Tea Break   : 11:00 AM (20 mins)
+    Lunch Break : 1:00 PM (1 hour)
+    Tea Break   : 3:30 PM (20 mins)
+    Wind up     : 5:30 PM
+
+Methodology:
+    - No powerpoints
+    - 100% hands-on 
+
+Repository:
+    - https://github.com/tkmagesh/ibm-go-mar-2023
+
+Software Requirements:
+    - Go tools (https://go.dev/dl)
+        verification :
+            go version
+    - Visual Studio Code (https://code.visualstudio.com)
+    - Go Extensions for VSCode (https://marketplace.visualstudio.com/items?itemName=golang.Go)
+
+Paradox of Choice (Barry Schwartz)
+    https://www.youtube.com/watch?v=VO6XEQIsCoM
+
+Why Go?
+    1. Simplicity
+        ONLY 25 keywords
+        - No access modifiers
+        - No classes (only structs)
+        - No inheritence (only composition)
+        - No reference types (everything is a value)
+        - No exceptions (only errors)
+        - No "try catch finally"
+        - No pointer arithmetic
+        - No implicit type conversion
+        - No function overloading
+        - No operator overloading
+
+    2. Lightweight
+        - Close to hardware
+        - No VM
+        - Tooling support for cross compilation
+        - Performance is equivalent to C++
+
+    3. Concurrency
+        - Lightweight Concurrency Model (Goroutines)
+            Linux OS Thread - 2MB
+            Goroutine - 4KB
+        - Concurrency features are built in the language
+            go keyword, channel data type, channel operator ( <- ), select case, range
+        - APIs
+            sync package
+            sync/atomic package
+
+
+    
