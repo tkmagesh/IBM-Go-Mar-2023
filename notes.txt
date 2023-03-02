@@ -120,3 +120,7 @@ Constructs
 Functions
     - Variadic functions
     - Anonymous functions
+    - Higher Order functions (functions as first class citizens)
+        * Assign functions as values to variables
+        * Pass functions as arguments
+        * Return functions as return values
