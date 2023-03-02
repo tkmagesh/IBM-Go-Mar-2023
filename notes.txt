@@ -119,3 +119,4 @@ Constructs
 
 Functions
     - Variadic functions
+    - Anonymous functions
