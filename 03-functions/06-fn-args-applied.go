@@ -15,6 +15,7 @@ func main() {
 		logAdd(100, 200)
 		logSubtract(100, 200)
 	*/
+
 	logOperation(add, 100, 200)
 	logOperation(subtract, 100, 200)
 
