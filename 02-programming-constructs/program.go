@@ -170,6 +170,9 @@ func main() {
 	fmt.Println("Using labels (control outer loop from inner loop)")
 OUTER_LOOP:
 	for i := 0; i <= 10; i++ {
+		if i%2 == 0 {
+			continue
+		}
 		for j := 0; j <= 10; j++ {
 			fmt.Printf("i = %d, j = %d\n", i, j)
 			if i == j {
