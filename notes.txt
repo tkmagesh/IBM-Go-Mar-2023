@@ -128,6 +128,8 @@ Functions
 Collections
     Array
         Fixed size typed collection
-        
+
     Slice
+        Varying size typed collection
+        
     Map
