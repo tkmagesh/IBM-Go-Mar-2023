@@ -2,10 +2,28 @@
 
 package main
 
+import "fmt"
+
 func main() {
-	getPrimes(3, 100)
+	primes := getPrimes(3, 100)
+	fmt.Println(primes)
 }
 
-func getPrimes(start, end int) {
-	/* generate the prime numbers and return */
+func getPrimes(start, end int) []int {
+	primes := make([]int, 0)
+	for i := start; i <= end; i++ {
+		if isPrime(i) {
+			primes = append(primes, i)
+		}
+	}
+	return primes
+}
+
+func isPrime(no int) bool {
+	for i := 2; i <= (no / 2); i++ {
+		if no%i == 0 {
+			return false
+		}
+	}
+	return true
 }
