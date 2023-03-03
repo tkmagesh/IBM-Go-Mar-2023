@@ -134,3 +134,30 @@ Collections
         
     Map
         Typed collection of key-value pairs
+
+Modules & Package
+    Module
+        Any code that need to be versioned & deployed together
+        Any folder that contains "go.mod" file
+        module file
+            - module name
+                (convention : the repo path)
+                ex github.com/tkmagesh77/ibm-go-mar-2023/09-modularity
+
+            - minimum go runtime version 
+            - dependencies
+
+    Package
+        Internal organization of a module
+        Folders
+
+
+    To create a module (go.mod)
+        go mod init <module_name>
+
+    To execute a module
+        go run .
+
+    To create a build
+        go build .
+        go build -o <binary_name> .
