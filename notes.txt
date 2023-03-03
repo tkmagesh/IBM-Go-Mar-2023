@@ -133,3 +133,4 @@ Collections
         Varying size typed collection
         
     Map
+        Typed collection of key-value pairs
