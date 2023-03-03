@@ -124,3 +124,10 @@ Functions
         * Assign functions as values to variables
         * Pass functions as arguments
         * Return functions as return values
+
+Collections
+    Array
+        Fixed size typed collection
+        
+    Slice
+    Map
