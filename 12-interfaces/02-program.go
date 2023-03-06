@@ -31,34 +31,39 @@ func (r Rectangle) Perimeter() float32 {
 }
 
 /* utility functions */
-type AreaFinder interface {
-	Area() float32
-}
 
-func PrintArea(x AreaFinder) {
+func PrintArea(x interface {
+	Area() float32
+}) {
 	fmt.Println("Area :", x.Area())
 }
 
-/*
-	Circle Perimeter = 2 * pi * radius
-	Rectangle Perimeter = 2 *( height + width)
-*/
-
-type PerimeterFinder interface {
+func PrintPerimeter(x interface {
 	Perimeter() float32
-}
-
-func PrintPerimeter(x PerimeterFinder) {
+}) {
 	fmt.Println("Perimeter :", x.Perimeter())
 }
 
-// interface composition
-type StatsFinder interface {
-	AreaFinder
-	PerimeterFinder
-}
+/* interface composition */
 
-func PrintShape(x StatsFinder) {
+/*
+func PrintShape(x interface {
+	Area() float32
+	Perimeter() float32
+}) {
+	PrintArea(x)
+	PrintPerimeter(x)
+}
+*/
+
+func PrintShape(x interface {
+	interface {
+		Area() float32
+	}
+	interface {
+		Perimeter() float32
+	}
+}) {
 	PrintArea(x)
 	PrintPerimeter(x)
 }
