@@ -74,6 +74,12 @@ func main() {
 		fmt.Println(pencilPtr1)
 		fmt.Println(pencilPtr2)
 	*/
+
+	fmt.Println("Before applying discount")
+	fmt.Println(Format(product))
+	ApplyDiscount(&product, 10)
+	fmt.Println("After applying discount")
+	fmt.Println(Format(product))
 }
 
 /*
@@ -84,3 +90,11 @@ func main() {
 		ApplyDiscount(?)
 			update the given product cost after applying the given discount percentage
 */
+
+func Format(p Product) string {
+	return fmt.Sprintf("Id = %d, Name = %q, Cost = %0.2f", p.Id, p.Name, p.Cost)
+}
+
+func ApplyDiscount(p *Product, discountPercentage float32) {
+	p.Cost = p.Cost * ((100 - discountPercentage) / 100)
+}
