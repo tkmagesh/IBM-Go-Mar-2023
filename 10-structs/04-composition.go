@@ -19,8 +19,8 @@ type PerishableProduct struct {
 	Expiry string
 }
 
-func NewPerishableProduct(id int, name string, cost float32, expiry string) PerishableProduct {
-	return PerishableProduct{
+func NewPerishableProduct(id int, name string, cost float32, expiry string) *PerishableProduct {
+	return &PerishableProduct{
 		Product: Product{
 			Id:   id,
 			Name: name,
