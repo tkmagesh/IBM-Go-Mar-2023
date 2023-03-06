@@ -192,3 +192,6 @@ Modules & Package
 
 Structs
     
+
+Interfaces
+    In Go interfaces are IMPLICITLY implemented
