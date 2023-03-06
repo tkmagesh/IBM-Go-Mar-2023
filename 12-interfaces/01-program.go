@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-type Circle struct /* implements AreaFinder */ {
+type Circle struct /* implements AreaFinder, PerimeterFinder, StatsFinder */ {
 	Radius float32
 }
 
@@ -17,7 +17,7 @@ func (c Circle) Perimeter() float32 {
 	return 2 * math.Pi * c.Radius
 }
 
-type Rectangle struct /* implements AreaFinder */ {
+type Rectangle struct /* implements AreaFinder, PerimeterFinder, StatsFinder */ {
 	Height float32
 	Width  float32
 }
