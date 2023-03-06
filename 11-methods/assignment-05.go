@@ -123,6 +123,12 @@ func (products Products) All(predicate func(Product) bool) bool {
 	return true
 }
 
+func CostlyProductPredicate(cost float32) func(Product) bool {
+	return func(p Product) bool {
+		return p.Cost > cost
+	}
+}
+
 func main() {
 	products := Products{
 		Product{105, "Pen", 5, 50, "Stationary"},
@@ -140,10 +146,13 @@ func main() {
 	fmt.Println(products.Format())
 
 	fmt.Println("Costly Products")
-	costlyProductPredicate := func(p Product) bool {
-		return p.Cost > 1000
-	}
+	/*
+		costlyProductPredicate := func(p Product) bool {
+			return p.Cost > 1000
+		}
+	*/
 	// costlyProducts := products.FilterCostlyProducts()
+	costlyProductPredicate := CostlyProductPredicate(2000)
 	costlyProducts := products.Filter(costlyProductPredicate)
 	fmt.Println(costlyProducts.Format())
 
