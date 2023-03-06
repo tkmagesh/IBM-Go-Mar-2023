@@ -5,7 +5,7 @@ import "fmt"
 type Employee struct {
 	Id   int
 	Name string
-	Org  Organization
+	Org  *Organization
 }
 
 type Organization struct {
@@ -17,9 +17,9 @@ type Organization struct {
 
 func main() {
 	ibm := Organization{Name: "IBM", City: "Bengaluru"}
-	emp1 := Employee{Id: 100, Name: "Magesh", Org: ibm}
+	emp1 := Employee{Id: 100, Name: "Magesh", Org: &ibm}
 	fmt.Println(emp1.Org)
-	emp2 := Employee{Id: 102, Name: "Suresh", Org: ibm}
+	emp2 := Employee{Id: 102, Name: "Suresh", Org: &ibm}
 	fmt.Println(emp2.Org)
 
 	ibm.City = "Pune"
