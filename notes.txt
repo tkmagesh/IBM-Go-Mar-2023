@@ -189,3 +189,6 @@ Modules & Package
 
     Reference:
         https://go.dev/ref/mod
+
+Structs
+    
