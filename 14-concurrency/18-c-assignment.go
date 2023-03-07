@@ -14,36 +14,35 @@ import (
 )
 
 func main() {
-	ch1 := genPrimes(3, 100)
-	ch2 := genPrimes(101, 200)
-	ch3 := genPrimes(201, 300)
+	primeData := []struct {
+		start int
+		end   int
+	}{
+		{start: 3, end: 100},
+		{start: 101, end: 200},
+		{start: 201, end: 300},
+		{start: 301, end: 400},
+		{start: 401, end: 500},
+	}
+
+	primeChannels := make([]<-chan int, 0)
+	for _, pData := range primeData {
+		ch := genPrimes(pData.start, pData.end)
+		primeChannels = append(primeChannels, ch)
+	}
 
 	primeNosCh := make(chan int)
-
 	wg := sync.WaitGroup{}
-	wg.Add(3)
-	go func() {
-		go func() {
-			for primeNo := range ch1 {
-				primeNosCh <- primeNo
-			}
-			wg.Done()
-		}()
 
-		go func() {
-			for primeNo := range ch2 {
-				primeNosCh <- primeNo
+	wg.Add(len(primeChannels))
+	for _, primeCh := range primeChannels {
+		go func(ch <-chan int) {
+			for data := range ch {
+				primeNosCh <- data
 			}
 			wg.Done()
-		}()
-
-		go func() {
-			for primeNo := range ch3 {
-				primeNosCh <- primeNo
-			}
-			wg.Done()
-		}()
-	}()
+		}(primeCh)
+	}
 
 	doneCh := make(chan struct{})
 	go func() {
