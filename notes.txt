@@ -214,3 +214,7 @@ Concurrency Programming
         Behaviors:
             A RECEIVE operation is ALWAYS a blocking operation
             A SEND operation can succeed (unblock) ONLY if a receive operation is already initiated
+
+            Buffered Channel
+                A SEND operation will be successful EVEN WHEN a receive operation is not initiated
+                    conditions apply: the channel should be free
