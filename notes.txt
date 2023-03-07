@@ -218,3 +218,10 @@ Concurrency Programming
             Buffered Channel
                 A SEND operation will be successful EVEN WHEN a receive operation is not initiated
                     conditions apply: the channel should be free
+
+    Concurrency Patterns:
+        https://go.dev/blog/pipelines
+    Advanced Concurrency Patterns`
+        https://blog.golang.org/advanced-go-concurrency-patterns
+
+    
