@@ -1,0 +1,4 @@
+/*
+Write a goroutine that generates the prime numbers between the given start and end
+The main function should print the generated numbers as and when they are generated
+*/
