@@ -37,14 +37,3 @@ func genFib(stopCh chan struct{}) <-chan int {
 	}()
 	return ch
 }
-
-/*
-func timeout(d time.Duration) <-chan time.Time {
-	timeoutCh := make(chan time.Time)
-	go func() {
-		time.Sleep(d)
-		timeoutCh <- time.Now()
-	}()
-	return timeoutCh
-}
-*/
