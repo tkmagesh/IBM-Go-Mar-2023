@@ -210,3 +210,7 @@ Concurrency Programming
                 ch <- 100
             Recieve:
                 data := <-ch
+
+        Behaviors:
+            A RECEIVE operation is ALWAYS a blocking operation
+            A SEND operation can succeed (unblock) ONLY if a receive operation is already initiated
