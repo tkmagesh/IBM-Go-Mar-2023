@@ -195,3 +195,6 @@ Structs
 
 Interfaces
     In Go interfaces are IMPLICITLY implemented
+
+Concurrency Programming
+    Application has more than one execution path

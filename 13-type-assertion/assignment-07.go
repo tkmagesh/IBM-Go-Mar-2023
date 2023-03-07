@@ -17,6 +17,25 @@ func main() {
 	fmt.Println(sum(10, 20, []any{30, 40, []any{10, "20"}})) //=> 130
 }
 
-func sum(?) int {
-	/* implementation */
+func sum(values ...any) int {
+	result := 0
+	for _, val := range values {
+		switch v := val.(type) {
+		case int:
+			result += v
+		case string:
+			if x, err := strconv.Atoi(v); err == nil {
+				result += x
+			}
+		case []any:
+			result += sum(v...)
+		case []int:
+			var list []any = make([]any, 0, len(v))
+			for _, x := range v {
+				list = append(list, x)
+			}
+			result += sum(list...)
+		}
+	}
+	return result
 }
