@@ -198,3 +198,15 @@ Interfaces
 
 Concurrency Programming
     Application has more than one execution path
+
+    Channel
+        Data type for enabling communication between goroutines
+        Declaration:
+            var ch chan int
+        Instantiation:
+            ch = make(chan int)
+        Operations: (using <- operator)
+            Send:
+                ch <- 100
+            Recieve:
+                data := <-ch
